@@ -1,6 +1,8 @@
 version: "3.2"
 services:
   outline:
+    env_file:
+      - stack.env
     image: docker.getoutline.com/outlinewiki/outline:0.78.0
     ports:
       - "3000:3000"
@@ -10,6 +12,8 @@ services:
       - postgres
       - redis
   redis:
+    env_file:
+      - stack.env
     image: redis
     ports:
       - "6379:6379"
@@ -22,6 +26,8 @@ services:
       timeout: 30s
       retries: 3
   postgres:
+    env_file:
+      - stack.env
     image: postgres
     ports:
       - "5432:5432"
