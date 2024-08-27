@@ -1,4 +1,31 @@
-# Evaluation von outline für pme
+# Evaluation von **outline** für pme
+
+- [Evaluation von outline für pme](#evaluation-von-outline-für-pme)
+  - [Konfiguration](#konfiguration)
+  - [Schritte für das Deployment](#schritte-für-das-deployment)
+    - [Voraussetzungen:](#voraussetzungen)
+    - [Anleitung](#anleitung)
+    - [Portainer-Besonderheit](#portainer-besonderheit)
+
+
+## Konfiguration
+
+_stack.env_
+Variable|Wert|Beschreibung
+-|-|-
+NODE_ENV|production|
+SECRET_KEY|_key_|
+UTILS_SECRET||
+DATABASE_URL=|postgres://user:pass@postgres:5432/outline||
+PGSSLMODE|disable|
+REDIS_URL|redis://redis:6379|
+URL|https://docs.zameit.com|
+PORT|3000|
+FILE_STORAGE|local|
+FILE_STORAGE_LOCAL_ROOT_DIR|/var/lib/outline/data|
+FILE_STORAGE_UPLOAD_MAX_SIZE|262144000|
+GOOGLE_CLIENT_ID||
+GOOGLE_CLIENT_SECRET||
 
 ## Schritte für das Deployment 
 
